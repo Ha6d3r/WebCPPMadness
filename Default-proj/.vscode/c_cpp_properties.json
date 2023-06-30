@@ -1,0 +1,24 @@
+{
+    "configurations": [
+        {
+            "name": "emscripten",
+            "includePath": [
+                "/home/ha6ki/DEV/WebCPPMadness/Default-proj/**",
+                "/home/ha6ki/DEV/emsdk/upstream/emscripten/system/include/**"
+            ],
+            "defines": [],
+            "compilerPath": "/home/ha6ki/DEV/emsdk/upstream/emscripten/em++",
+            "cStandard": "c17",
+            "cppStandard": "c++17",
+            "intelliSenseMode": "linux-clang-x64",
+            "mergeConfigurations": false,
+            "browse": {
+                "path": [
+                    "${workspaceFolder}/**"
+                ],
+                "limitSymbolsToIncludedHeaders": true
+            }
+        }
+    ],
+    "version": 4
+}
