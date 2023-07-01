@@ -31,12 +31,12 @@ pushd build
     make
 popd
 
-if [ ! -d "docs" ]; then
-    mkdir docs
+if [ ! -d "../docs" ]; then
+    mkdir ../docs
     if [ -f "build/WebImGui.html" ]; then
-        cp "build/WebImGui.html" "docs/WebImGui.html"
-        cp "build/WebImGui.data" "docs/WebImGui.data"
-        cp "build/WebImGui.js"   "docs/WebImGui.js"
-        cp "build/WebImGui.wasm" "docs/WebImGui.wasm"
+        cp "build/WebImGui.html" "../docs/WebImGui.html"
+        cp "build/WebImGui.data" "../docs/WebImGui.data"
+        cp "build/WebImGui.js"   "../docs/WebImGui.js"
+        cp "build/WebImGui.wasm" "../docs/WebImGui.wasm"
     fi
 fi
