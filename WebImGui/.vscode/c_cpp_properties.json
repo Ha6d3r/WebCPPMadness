@@ -5,7 +5,8 @@
             "includePath": [
                 "/home/ha6ki/CDEV/WebCPPMadness/Default-proj/**",
                 "/home/ha6ki/DEV/emsdk/upstream/emscripten/system/include/**",
-                "/home/ha6ki/DEV/imgui/**"
+                "/home/ha6ki/DEV/imgui/**",
+                "/home/ha6ki/DEV/imgui/backends/**"
             ],
             "defines": [],
             "compilerPath": "/home/ha6ki/DEV/emsdk/upstream/emscripten/em++",

@@ -1,0 +1,41 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "shell",
+			"label": "Emscripten: build",
+			"command": "./build.sh",
+			"problemMatcher": [],
+			"detail": "Emscripten build.sh task"
+		},
+		{
+			"type": "shell",
+			"label": "Project: open",
+			"command": "${input:openSimpleBrowser}"
+		},
+		{
+			"type": "shell",
+			"label": "Project: show",
+			"command": "python3",
+			"args": ["-m", "http.server", "--directory", "${workspaceFolder}/build/"]
+		},
+		{
+			"type": "shell",
+			"label": "Build+run",
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			},
+			"dependsOrder": "sequence",
+			"dependsOn": ["Emscripten: build","Project: open", "Project: show"]
+		}
+	],
+	"inputs": [
+		{
+		  "id": "openSimpleBrowser",
+		  "type": "command",
+		  "command": "simpleBrowser.show",
+		  "args": ["http://0.0.0.0:8000/"]
+		}
+	  ]
+}
