@@ -9,9 +9,9 @@ pushd $EMSCRIPTEN
     source emsdk_env.sh
 popd
 
-if [ -d "build" ]; then
-    rm -r ./build
-fi
+#if [ -d "build" ]; then
+#    rm -r ./build
+#fi
 
 if [ ! -d "build" ]; then
     mkdir build
@@ -30,3 +30,12 @@ pushd build
     echo "Building project ..."
     make
 popd
+
+if [ ! -d "showcase" ]; then
+    mkdir showcase
+    if [ -f "build/default-proj.html" ]; then
+        cp "build/default-proj.html" "showcase/default-proj.html"
+        cp "build/default-proj.js"   "showcase/default-proj.js"
+        cp "build/default-proj.wasm" "showcase/default-proj.wasm"
+    fi
+fi
