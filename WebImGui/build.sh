@@ -9,9 +9,9 @@ pushd $EMSCRIPTEN
     source emsdk_env.sh
 popd
 
-if [ -d "build" ]; then
-    rm -r ./build
-fi
+#if [ -d "build" ]; then
+#    rm -r ./build
+#fi
 
 if [ ! -d "build" ]; then
     mkdir build
@@ -30,3 +30,13 @@ pushd build
     echo "Building project ..."
     make
 popd
+
+if [ ! -d "docs" ]; then
+    mkdir docs
+    if [ -f "build/WebImGui.html" ]; then
+        cp "build/WebImGui.html" "docs/WebImGui.html"
+        cp "build/WebImGui.data" "docs/WebImGui.data"
+        cp "build/WebImGui.js"   "docs/WebImGui.js"
+        cp "build/WebImGui.wasm" "docs/WebImGui.wasm"
+    fi
+fi
