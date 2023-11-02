@@ -154,11 +154,11 @@ int init_imgui()
 
   // Load Fonts
 
-  io.Fonts->AddFontFromFileTTF("data/KarmaFuture.ttf", 23.0f);
-  io.Fonts->AddFontFromFileTTF("data/KarmaFuture.ttf", 18.0f);
-  io.Fonts->AddFontFromFileTTF("data/KarmaFuture.ttf", 26.0f);
-  io.Fonts->AddFontFromFileTTF("data/KarmaFuture.ttf", 32.0f);
-  io.Fonts->AddFontDefault();
+  //io.Fonts->AddFontFromFileTTF("data/KarmaFuture.ttf", 23.0f);
+  //io.Fonts->AddFontFromFileTTF("data/KarmaFuture.ttf", 18.0f);
+  //io.Fonts->AddFontFromFileTTF("data/KarmaFuture.ttf", 26.0f);
+  //io.Fonts->AddFontFromFileTTF("data/KarmaFuture.ttf", 32.0f);
+  //io.Fonts->AddFontDefault();
 
 
   resizeCanvas();
